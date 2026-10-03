@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import ARPage from "./ARPage";
 
 const solarSystemVideo =
   "https://www.youtube.com/embed/Y2ijS8jY4F4";
@@ -113,18 +114,18 @@ const planets = [
     }
   },
 
-{
-  name: "Uranus",
-  order: "Planet ketujuh dari Matahari",
-  image: "https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg",
-  description: "Uranus merupakan planet raksasa es yang memiliki warna biru kehijauan.",
-  facts: {
-    diameter: "50.724 km",
-    temperature: "Sangat dingin",
-    moons: "27",
-    rotation: "Sekitar 17 jam"
-  }
-},
+  {
+    name: "Uranus",
+    order: "Planet ketujuh dari Matahari",
+    image: "https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg",
+    description: "Uranus merupakan planet raksasa es yang memiliki warna biru kehijauan.",
+    facts: {
+      diameter: "50.724 km",
+      temperature: "Sangat dingin",
+      moons: "27",
+      rotation: "Sekitar 17 jam"
+    }
+  },
   {
     name: "Neptunus",
     order: "Planet kedelapan dari Matahari",
@@ -187,6 +188,7 @@ const quizQuestions = [
 ];
 
 function App() {
+
   const [page, setPage] = useState("landing");
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -197,7 +199,7 @@ function App() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [quizFinished, setQuizFinished] = useState(false);
 
-  
+
 
   const speakPlanet = () => {
     if (!selectedPlanet) return;
@@ -687,6 +689,10 @@ function App() {
     );
   }
 
+  if (page === "ar") {
+    return <ARPage onBack={() => setPage("landing")} />;
+  }
+
   return (
     <main className="landing">
       <div className="stars"></div>
@@ -731,6 +737,12 @@ function App() {
           >
             Mulai Belajar
             <span>→</span>
+          </button>
+          <button
+            className="ar-button"
+            onClick={() => setPage("ar")}
+          >
+            📱 Coba AR
           </button>
         </div>
 
