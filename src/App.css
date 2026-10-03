@@ -1,0 +1,1379 @@
+.landing {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #172554 0%,
+      #080d24 35%,
+      #020617 75%
+    );
+
+  overflow: hidden;
+  position: relative;
+}
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND BINTANG
+========================= */
+
+.stars {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+
+  background-size:
+    90px 90px,
+    140px 140px;
+
+  background-position:
+    10px 20px,
+    50px 80px;
+
+  opacity: 0.35;
+}
+
+
+/* =========================
+   KONTEN UTAMA
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 650px;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  color: #93c5fd;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   JUDUL
+========================= */
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 10vw, 110px);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+}
+
+.hero h1 span {
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #c084fc,
+    #f0abfc
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================
+   DESKRIPSI
+========================= */
+
+.description {
+  max-width: 520px;
+
+  margin: 30px auto;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #cbd5e1;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.start-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  padding: 15px 25px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.start-button span {
+  font-size: 22px;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   PLANET
+========================= */
+
+.planet {
+  position: absolute;
+
+  z-index: 2;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   PLANET BUMI
+========================= */
+
+.planet-one {
+  width: 110px;
+
+  height: 110px;
+
+  top: 16%;
+
+  left: 10%;
+
+  animation:
+    float 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   PLANET VENUS
+========================= */
+
+.planet-two {
+  width: 55px;
+
+  height: 55px;
+
+  top: 23%;
+
+  right: 14%;
+
+  animation:
+    float 4s ease-in-out infinite reverse;
+}
+
+
+/* =========================
+   PLANET MARS
+========================= */
+
+.planet-three {
+  width: 130px;
+
+  height: 130px;
+
+  bottom: 10%;
+
+  right: 8%;
+
+  animation:
+    float 6s ease-in-out infinite;
+}
+
+
+/* =========================
+   ANIMASI PLANET
+========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   SCROLL TEXT
+========================= */
+
+.scroll-text {
+  position: absolute;
+
+  bottom: 25px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  z-index: 5;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 25px;
+  }
+
+
+  .hero h1 {
+    font-size: 64px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .description {
+    font-size: 15px;
+  }
+
+
+  /* Bumi */
+
+  .planet-one {
+    width: 55px;
+
+    height: 55px;
+
+    left: 6%;
+  }
+
+
+  /* Venus */
+
+  .planet-two {
+    width: 30px;
+
+    height: 30px;
+
+    right: 8%;
+  }
+
+
+  /* Mars */
+
+  .planet-three {
+    width: 75px;
+
+    height: 75px;
+
+    right: 5%;
+  }
+}
+
+/* =========================
+   EXPLORE PAGE
+========================= */
+
+.explore-page {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      #172554 0%,
+      #080d24 40%,
+      #020617 80%
+    );
+
+  overflow-x: hidden;
+}
+
+.explore-header {
+  position: relative;
+  z-index: 5;
+
+  max-width: 1100px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.back-button {
+  border: 1px solid #334155;
+
+  background: rgba(15, 23, 42, 0.7);
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background: #1e293b;
+}
+
+.explore-subtitle {
+  margin: 0 0 8px;
+
+  color: #93c5fd;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+.explore-header h1 {
+  margin: 0;
+
+  font-size: 48px;
+}
+
+.explore-header h1 span {
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #c084fc
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.planet-section {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+.section-description {
+  color: #94a3b8;
+
+  margin-bottom: 30px;
+}
+
+.planet-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.planet-card {
+  border: 1px solid #1e293b;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  background:
+    rgba(15, 23, 42, 0.8);
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.planet-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #6366f1;
+
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.planet-image-container {
+  width: 100%;
+
+  height: 180px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+}
+
+.planet-image-container img {
+  width: 150px;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.planet-card:hover img {
+  transform: scale(1.08);
+}
+
+.planet-info h2 {
+  margin: 0 0 6px;
+
+  font-size: 20px;
+}
+
+.planet-info p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PLANET MODAL
+========================= */
+
+.planet-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    rgba(2, 6, 23, 0.8);
+
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  width: 180px;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  margin: 8px 0 15px;
+
+  font-size: 32px;
+}
+
+.modal-content p {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+}
+
+.modal-subtitle {
+  color: #60a5fa !important;
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+.close-button {
+  position: absolute;
+
+  top: 15px;
+
+  right: 18px;
+
+  width: 35px;
+
+  height: 35px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #1e293b;
+
+  color: white;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.learn-button {
+  margin-top: 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px 20px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .explore-page {
+    padding: 25px 18px;
+  }
+
+  .explore-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .explore-header h1 {
+    font-size: 38px;
+  }
+
+  .planet-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .planet-image-container {
+    height: 140px;
+  }
+
+  .planet-image-container img {
+    width: 110px;
+
+    height: 110px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .planet-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .planet-image-container {
+    height: 180px;
+  }
+
+  .planet-image-container img {
+    width: 140px;
+
+    height: 140px;
+  }
+}
+
+/* =========================
+   PLANET DETAIL
+========================= */
+
+.detail-page {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      #172554 0%,
+      #080d24 40%,
+      #020617 80%
+    );
+
+  color: white;
+}
+
+.detail-back-button {
+  position: relative;
+
+  z-index: 5;
+
+  border: 1px solid #334155;
+
+  background: rgba(15, 23, 42, 0.8);
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.detail-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1000px;
+
+  min-height: 80vh;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.detail-image {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.detail-image img {
+  width: 360px;
+
+  height: 360px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 60px rgba(96, 165, 250, 0.25);
+
+  animation:
+    planetFloat 5s ease-in-out infinite;
+}
+
+@keyframes planetFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.detail-subtitle {
+  color: #60a5fa;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+}
+
+.detail-info h1 {
+  margin: 0 0 20px;
+
+  font-size: 64px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      #c084fc
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.detail-description {
+  color: #cbd5e1;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+}
+
+.fact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.fact-card {
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: rgba(30, 41, 59, 0.7);
+
+  border: 1px solid #1e293b;
+}
+
+.fact-card span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  margin-bottom: 5px;
+}
+
+.fact-card strong {
+  font-size: 15px;
+}
+
+.learning-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.audio-button,
+.video-button {
+  border: 1px solid #334155;
+
+  background: #0f172a;
+
+  color: white;
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.audio-button:hover,
+.video-button:hover {
+  background: #1e293b;
+}
+
+.quiz-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.quiz-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .detail-page {
+    padding: 25px 18px;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding-top: 40px;
+  }
+
+  .detail-image img {
+    width: 250px;
+
+    height: 250px;
+  }
+
+  .detail-info h1 {
+    font-size: 46px;
+  }
+
+  .detail-description {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   QUIZ PAGE
+========================= */
+
+.quiz-page {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      #172554 0%,
+      #080d24 40%,
+      #020617 80%
+    );
+
+  color: white;
+}
+
+.quiz-container {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  padding-top: 20px;
+}
+
+.quiz-header {
+  margin-top: 40px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 20px;
+}
+
+.quiz-label {
+  color: #60a5fa;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  margin: 0;
+}
+
+.quiz-progress {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 7px;
+
+  margin: 18px 0 30px;
+
+  border-radius: 20px;
+
+  background: #1e293b;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      #c084fc
+    );
+
+  transition:
+    width 0.3s ease;
+}
+
+.question-card {
+  padding: 35px;
+
+  border-radius: 25px;
+
+  background:
+    rgba(15, 23, 42, 0.9);
+
+  border: 1px solid #1e293b;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.question-card h1 {
+  margin: 0 0 30px;
+
+  font-size: 28px;
+
+  line-height: 1.4;
+}
+
+.answer-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.answer-button {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 16px 18px;
+
+  border-radius: 12px;
+
+  border: 1px solid #334155;
+
+  background: #0f172a;
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.answer-button:hover {
+  background: #1e293b;
+
+  transform: translateX(4px);
+}
+
+.answer-button.correct {
+  border-color: #22c55e;
+
+  background:
+    rgba(34, 197, 94, 0.15);
+}
+
+.answer-button.wrong {
+  border-color: #ef4444;
+
+  background:
+    rgba(239, 68, 68, 0.15);
+}
+
+.answer-feedback {
+  margin-top: 20px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  line-height: 1.6;
+}
+
+.answer-feedback p {
+  margin-bottom: 0;
+}
+
+.correct-feedback {
+  background:
+    rgba(34, 197, 94, 0.1);
+
+  border: 1px solid
+    rgba(34, 197, 94, 0.3);
+}
+
+.wrong-feedback {
+  background:
+    rgba(239, 68, 68, 0.1);
+
+  border: 1px solid
+    rgba(239, 68, 68, 0.3);
+}
+
+.next-question {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.next-question:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   QUIZ RESULT
+========================= */
+
+.quiz-result {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 550px;
+
+  margin: 100px auto 0;
+
+  padding: 45px;
+
+  text-align: center;
+
+  border-radius: 25px;
+
+  background:
+    rgba(15, 23, 42, 0.9);
+
+  border: 1px solid #1e293b;
+}
+
+.quiz-result h1 {
+  font-size: 42px;
+
+  margin: 10px 0 30px;
+}
+
+.score-circle {
+  width: 140px;
+
+  height: 140px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 5px solid #60a5fa;
+
+  font-size: 35px;
+
+  font-weight: bold;
+}
+
+.quiz-result h2 {
+  margin-bottom: 5px;
+}
+
+.quiz-result > p {
+  color: #94a3b8;
+
+  line-height: 1.6;
+}
+
+.result-buttons {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.back-explore-button {
+  padding: 13px;
+
+  border-radius: 12px;
+
+  border: 1px solid #334155;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .quiz-page {
+    padding: 25px 15px;
+  }
+
+  .quiz-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .question-card {
+    padding: 22px;
+  }
+
+  .question-card h1 {
+    font-size: 22px;
+  }
+
+  .quiz-result {
+    margin-top: 60px;
+
+    padding: 30px 20px;
+  }
+
+}
+
+.stop-audio-button {
+  border: 1px solid #334155;
+
+  background: #0f172a;
+
+  color: white;
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.stop-audio-button:hover {
+  background: #1e293b;
+}
+
+.video-container {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid #334155;
+  border-radius: 16px;
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.video-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close-video {
+  border: none;
+  background: #1e293b;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-video:hover {
+  background: #334155;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
